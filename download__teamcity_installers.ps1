@@ -2,7 +2,7 @@
 
 $wc=new-object system.net.webclient
 $wc.UseDefaultCredentials = $false
-$my_secure_password = convertto-securestring "123asdQ!" -asplaintext -force
+$my_secure_password = convertto-securestring "123asdQ!!!" -asplaintext -force
 $wc.Credentials = New-Object System.Net.NetworkCredential("iholoviy", $my_secure_password)
 $wc.Headers.Add("AUTHORIZATION", "Basic YTph");
 
@@ -38,7 +38,7 @@ catch
     Break
 }
 
-
+;
 #downloading files
 foreach( $link in $xml.files.file.content.href){
            
