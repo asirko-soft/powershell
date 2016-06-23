@@ -3,7 +3,7 @@
 <#
 .SYNOPSIS
     
-   Script to execute "a rolling restart" of management agents on ESXi hosts in selected vi container (cluster, folder, datacenter)
+   Script to execute a remote command on ESXi hosts in selected vi container (cluster, folder, datacenter)
  
 .DESCRIPTION
  
@@ -11,8 +11,8 @@
    indicated as second parameter. Subsequently credentials required to open SSH connection to all hosts are gathered as user input.
    It is assumed that SSH service is stopped on each ESXi host, so the script first starts it up, then establishes SSH connection using
    plink.exe executable (expected to be saved in script's working directory).
-   A sequence of shell commands to restart hostd and vpxa agents is executed on each host.
-   This sequence is saved in text file rstagtsqc.txt that is expected to be saved in script's working directory.
+   A sequence of shell commands is executed on each host.
+   This sequence is saved in text file rmfile.txt that is expected to be saved in script's working directory.
  
 .PARAMETER vCenterServer
  
@@ -24,19 +24,19 @@
  
 .EXAMPLE
  
-    restart_mgmt_agents.ps1 -vCenterServer vcenter.seba.local -Location Test-Cluster
+    remove_fc_dicsovery_script.ps1 -vCenterServer vcenter.seba.local -Location Test-Cluster
     
     vCenter server indicated as FQDN.
     
 .EXAMPLE
  
-    restart_mgmt_agents.ps1 -vcenter 10.0.0.1 -location production-cluster
+    remove_fc_dicsovery_script.ps1 -vcenter 10.0.0.1 -location production-cluster
     
     vCenter server indicated as IP address.
  
 .EXAMPLE
  
-    restart_mgmt_agents.ps1
+    remove_fc_dicsovery_script.ps1
     
     Script will interactively ask for both mandatory parameters.
    
