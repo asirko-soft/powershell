@@ -1,0 +1,12 @@
+rm /etc/rc.local.d/99bnx2fc.sh
+esxcli fcoe nic disable -n vmnic0
+esxcli fcoe nic disable -n vmnic1
+esxcli fcoe nic disable -n vmnic2
+esxcli fcoe nic disable -n vmnic3
+esxcli fcoe nic disable -n vmnic4
+esxcli fcoe nic disable -n vmnic5
+esxcli fcoe nic disable -n vmnic6
+esxcli fcoe nic disable -n vmnic7
+esxcli fcoe nic disable -n vmnic8
+esxcli fcoe nic disable -n vmnic9
+esxcli software vib remove --vibname=scsi-bnx2fc

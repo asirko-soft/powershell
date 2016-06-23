@@ -90,7 +90,7 @@ catch
 }
 
 foreach( $link in $xml.files.file.content.href){
-           #Write-Host $link
+           Write-Host $link
         
       if ($link -like '*Core-X*' -or $link -like '*Agent-X*' -or $link -like '*CentralConsole-*' -or $link -like '*LocalMountUtility-X*'){
         ##$dlink=("https://iholoviy:123asdQ!@tc.appassure.com" +$link)
