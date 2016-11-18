@@ -1,2 +1,2 @@
-/etc/init.d/hostd restart
-/etc/init.d/vpxa restart
+sed -i '/ui/d' etc/vmware/rhttpproxy/endpoints.conf
+/etc/init.d/rhttpproxy restart

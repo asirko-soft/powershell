@@ -35,11 +35,15 @@ foreach($esx in $esxHosts) {
  
     # Update Shell warning Settings
  
-    Get-AdvancedSetting -Entity $esx -Name UserVars.SuppressShellWarning | Set-AdvancedSetting -Value '1' -Confirm:$false
+    # Get-AdvancedSetting -Entity $esx -Name UserVars.SuppressShellWarning | Set-AdvancedSetting -Value '1' -Confirm:$false
  
  	# Update Network redundancy warning Settings
     
-	Get-AdvancedSetting -Entity $esx -Name das.ignoreRedundantNetWarning | Set-AdvancedSetting -Value 'true' -Confirm:$false
+	# Get-AdvancedSetting -Entity $esx -Name das.ignoreRedundantNetWarning | Set-AdvancedSetting -Value 'true' -Confirm:$false
+
+    # Disable account lockout
+
+    Get-AdvancedSetting -Entity $esx -Name Security.AccountLockFailures | Set-AdvancedSetting -Value '0' -Confirm:$false
  
 }
  
