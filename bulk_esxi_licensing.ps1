@@ -9,4 +9,4 @@ $licenseData.LicenseKeys += $licenseKeyEntry
 $licenseDataManager.UpdateAssociatedLicenseData($hostContainer.Uid, $licenseData)
 $licenseDataManager.QueryAssociatedLicenseData($hostContainer.Uid)
 
-## now you may add hosts to container (folder named R630 in my case
+## now you may add hosts to container (folder named R630 in my case)

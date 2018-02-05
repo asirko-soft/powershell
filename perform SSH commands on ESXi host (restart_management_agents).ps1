@@ -138,7 +138,7 @@ else{
 }
  
 #check PowerCLI version
-if (($vmsnapin.Version.Major -gt 5) -or (($vmsnapin.version.major -eq 5) -and ($vmsnapin.version.minor -ge 1))) {
+
 	
  
     #assume everything is OK at this point
@@ -231,9 +231,7 @@ if (($vmsnapin.Version.Major -gt 5) -or (($vmsnapin.version.major -eq 5) -and ($
 	else{
 	Write-And-Log $logfilename "Error connecting vCenter server $vCenterServer, exiting." $error.count "full"
 	}
-}
-else {
-	write-and-log $logfilename "This script requires PowerCLI 5.1 or greater to run properly." 1 "full"
-}
+
+
  
 #Stop-Transcript ...well, if you had started it

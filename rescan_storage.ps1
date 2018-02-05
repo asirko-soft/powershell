@@ -35,7 +35,7 @@ foreach ($server in $servers)
 	write-host "Rescan VMFS on "$server
 	get-VMHostStorage -VMHost $server -RescanVmfs
 	}
- 80..89 | ForEach-Object { get-VMHostStorage -VMHost 192.168.64.$_ -Refresh}
+ #80..89 | ForEach-Object { get-VMHostStorage -VMHost 192.168.64.$_ -Refresh}
 
 #done, lets disconnect
 Disconnect-VIServer -confirm:$false
